@@ -1,18 +1,18 @@
 // NO TOCAR
 const statsNames = {
-  hp: "hp",
-  attack: "ataque",
-  defense: "defensa",
-  speed: "velocidad",
+    hp: "hp",
+    attack: "ataque",
+    defense: "defensa",
+    speed: "velocidad",
 };
 
 // NO TOCAR
 function createPokemonCard(pokemon, order) {
-  const body = document.querySelector("main");
-  const cardContainer = document.createElement("div");
-  cardContainer.className = "card";
+    const body = document.querySelector("main");
+    const cardContainer = document.createElement("div");
+    cardContainer.className = "card";
 
-  cardContainer.innerHTML = `
+    cardContainer.innerHTML = `
     <img
       src="..."
       class="card-img-top"
@@ -45,22 +45,22 @@ function createPokemonCard(pokemon, order) {
     </div>
   `;
 
-  body.appendChild(cardContainer);
+    body.appendChild(cardContainer);
 }
 
 // NO TOCAR
 async function getPokemonData(name) {
-  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
-  const json = await response.json();
-  const parsedData = {
-    stats: json.stats
-      .map((stat) => ({
-        name: statsNames[stat.stat.name],
-        amount: stat["base_stat"],
-      }))
-      .filter((stat) => stat.name),
-    imagen: json.sprites["front_default"],
-  };
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+    const json = await response.json();
+    const parsedData = {
+        stats: json.stats
+            .map((stat) => ({
+                name: statsNames[stat.stat.name],
+                amount: stat["base_stat"],
+            }))
+            .filter((stat) => stat.name),
+        imagen: json.sprites["front_default"],
+    };
 
-  return parsedData;
+    return parsedData;
 }
