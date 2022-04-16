@@ -9,18 +9,10 @@ async function fillPokemonData(name, order) {
     // puedes explorar los elementos HTML utilizando las Dev Tools de tu
     // navegador.
 
+    const pokemonCards = document.querySelector(`#imagen-pokemon-${order}`);
+    pokemonCards.src = pokemonData.imagen;
 
-    const pokemonCards = document.querySelectorAll('.card-img-top');
-    console.log(pokemonData);
-    //const pokemonImages = [];
-    /* pokemonImages.push(pokemonData.imagen);
 
-    console.log(pokemonImages);
-
-    pokemonCards.forEach(card => {
-        card.src = pokemonImages.order;
-    });
- */
     // 2) Utilizando los stats de cada pokemon, deberás rellenar cada una de las
     // barras que figuran en la card. Dependiendo de la cantidad de cada atributo
     // tendrás que decidir el color que tendrá la barra en cada caso:
@@ -30,11 +22,16 @@ async function fillPokemonData(name, order) {
     // Deberás utilizar las clases que se encuentran en el archivo styles.css
 
     //ESCRIBE TU CÓDIGO A CONTINUACIÓN DENTRO DE LA FUNCIÓN:
+
+    const barraHp = document.querySelector(`barra-hp-${order}`);
+
+
 }
 
 
+
 //LISTADO DE POKEMONS - PUEDES CAMBIAR POR TU FAVORITO!
-const pokemons = ["pikachu", "bulbasaur", "charmander", "diglett"];
+const pokemons = ["pikachu", "bulbasaur", "charmander", "meowth"];
 
 //INICIALIZADOR - NO TOCAR
 pokemons.forEach((pokemon, index) => {
