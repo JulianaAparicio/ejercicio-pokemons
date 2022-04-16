@@ -88,3 +88,27 @@ pokemons.forEach((pokemon, index) => {
     createPokemonCard(pokemon, pokemonNumber);
     fillPokemonData(pokemon, pokemonNumber);
 });
+
+
+// EJERCICIO  DE PLAYGROUND
+
+//Como continuación del ejercicio del módulo anterior, (Barra de progreso) vamos a utilizar un loader 
+//que sea visible solamente hasta que la información de las cards de los pokémones haya sido cargada:
+
+//HTML: Crear un div con id “contenedor-carga” y, dentro de él, otro div con id “carga” justo después del header.
+//¡No modificar el CSS!
+//JS: en el caso de que la carga ocurriera demasiado rápido, utilizar settimeout para que simule su retraso.
+
+/* const header = document.querySelector('header');
+
+setTimeout(function() {
+    header.innerHTML += `<!-- contenedor de carga -->
+    <div id="contenedor-carga">
+        <div id="carga"></div>
+    </div>`;
+}, 5000); */
+
+/* const spinner = document.getElementById('contenedor-carga')
+
+spinner.width = 36;
+spinner.height = 36; */
